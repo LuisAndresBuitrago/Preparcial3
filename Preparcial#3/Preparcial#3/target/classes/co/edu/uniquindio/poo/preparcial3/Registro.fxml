@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="471.0" prefWidth="505.0" spacing="20" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.preparcial3.RegistroViewController">
+
+    <padding>
+        <Insets bottom="30" left="30" right="30" top="30" />
+    </padding>
+
+    <!-- Encabezado -->
+    <Label style="-fx-text-fill: #2c3e50;" text="Registrar ">
+        <font>
+            <Font name="System Bold" size="28" />
+        </font>
+    </Label>
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <children>
+            <TableView fx:id="tablaVentas" prefHeight="256.0" prefWidth="495.0">
+                <columns>
+                    <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+                    <TableColumn fx:id="colCliente" prefWidth="75.0" text="Cliente" />
+                    <TableColumn prefWidth="75.0" text="colTotal" />
+                </columns>
+            </TableView>
+        </children>
+    </VBox>
+
+</VBox>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.preparcial3.ClientesViewController">
+
+    <padding>
+        <Insets bottom="30" left="30" right="30" top="30" />
+    </padding>
+
+    <!-- Encabezado -->
+    <Label style="-fx-text-fill: #2c3e50;" text="Registrar Cliente">
+        <font>
+            <Font name="System Bold" size="28" />
+        </font>
+    </Label>
+
+    <!-- Formulario -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="30" left="30" right="30" top="30" />
+        </padding>
+
+        <GridPane hgap="15" vgap="20">
+
+            <!-- Nombre -->
+            <Label style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;" text="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNombre" promptText="Ingrese la Ubicacion" style="-fx-font-size: 14px; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Descripción -->
+            <Label  prefHeight="20.0" prefWidth="151.0" style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;" text="Documento" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="txtDocumento" promptText="Ingrese el numero de Habitaciones" style="-fx-font-size: 14px; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <!-- Precio -->
+            <Label style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;" text="Telefono" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTelefono" promptText="Ingrese el numero de Pisos" style="-fx-font-size: 14px; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <!-- Stock -->
+            <Label style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;" text="Correo" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="txtCorreo" promptText="Ingrese el Precio del inmueble" style="-fx-font-size: 14px; -fx-padding: 8;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="120" prefWidth="120" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="300" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <!-- Botones -->
+        <HBox alignment="CENTER_RIGHT" spacing="15">
+            <VBox.margin>
+                <Insets top="20" />
+            </VBox.margin>
+         <Button fx:id="btnActualizar" mnemonicParsing="false" text="Actualizar" />
+         <Button fx:id="btnEliminar" mnemonicParsing="false" text="Eliminar" />
+            <Button fx:id="btnGuardar"  style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 25; -fx-cursor: hand; -fx-background-radius: 5;" text="Guardar ">
+                <font>
+                    <Font name="System Bold" size="14" />
+                </font>
+            </Button>
+        </HBox>
+    </VBox>
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <children>
+            <TableView fx:id="tablaClientes" prefHeight="256.0" prefWidth="495.0">
+                <columns>
+                    <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                    <TableColumn fx:id="colDocumento" prefWidth="75.0" text="Documento" />
+                    <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+                    <TableColumn fx:id="colCorreo" prefWidth="75.0" text="Correo" />
+                </columns>
+            </TableView>
+        </children>
+    </VBox>
+
+</VBox>
